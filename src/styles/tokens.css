@@ -1,0 +1,88 @@
+/* Rimlight design tokens.
+   Direction-neutral: components use logical properties only, so `dir="rtl"` mirrors everything. */
+@import "@fontsource-variable/manrope/index.css";
+@import "@fontsource-variable/jetbrains-mono/index.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
+@import "@fontsource/ibm-plex-sans-arabic/latin-500.css";
+
+:root {
+  --accent: #7aa2ff;
+  --ui-scale: 1;
+
+  /* type */
+  --font-latin: "Manrope Variable", "Segoe UI Variable", system-ui, sans-serif;
+  --font-arabic: "IBM Plex Sans Arabic", "Segoe UI", system-ui, sans-serif;
+  --font-ui: var(--font-latin), var(--font-arabic);
+  --font-mono: "JetBrains Mono Variable", ui-monospace, Consolas, monospace;
+
+  /* rhythm */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --t-fast: 120ms;
+  --t-med: 220ms;
+
+  /* semantic */
+  --danger: #ff5c6c;
+  --warn: #ffb454;
+  --ok: #4fd39b;
+
+  /* theme: midnight (default) */
+  --bg: #090b11;
+  --bg-glow: rgba(90, 120, 220, 0.09);
+  --surface-1: #10131b;
+  --surface-2: #161a24;
+  --surface-3: #1d2230;
+  --surface-glass: rgba(20, 24, 34, 0.72);
+  --line: rgba(255, 255, 255, 0.065);
+  --line-strong: rgba(255, 255, 255, 0.12);
+  --text: #eceff6;
+  --text-dim: #a4abbd;
+  --text-faint: #6b7286;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+  --shadow-pop: 0 24px 60px -18px rgba(0, 0, 0, 0.75), 0 0 0 1px var(--line-strong);
+}
+
+:root[data-theme="graphite"] {
+  --bg: #111215;
+  --bg-glow: rgba(255, 255, 255, 0.035);
+  --surface-1: #181a1f;
+  --surface-2: #1f2228;
+  --surface-3: #292d35;
+  --surface-glass: rgba(28, 30, 36, 0.78);
+}
+
+:root[data-theme="oled"] {
+  --bg: #000;
+  --bg-glow: rgba(255, 255, 255, 0.02);
+  --surface-1: #08090c;
+  --surface-2: #0e1015;
+  --surface-3: #171a21;
+  --surface-glass: rgba(10, 11, 14, 0.85);
+  --line: rgba(255, 255, 255, 0.075);
+}
+
+:root[data-theme="glass"] {
+  --bg: #0b0d14;
+  --bg-glow: rgba(140, 110, 255, 0.16);
+  --surface-1: rgba(255, 255, 255, 0.045);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --surface-3: rgba(255, 255, 255, 0.105);
+  --surface-glass: rgba(24, 27, 40, 0.55);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.17);
+}
+
+:root {
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
+  --accent-mid: color-mix(in srgb, var(--accent) 34%, transparent);
+  --accent-strong: color-mix(in srgb, var(--accent) 82%, white);
+  --on-accent: #0a0d14;
+}
